@@ -1,0 +1,61 @@
+INSERT INTO Complexes VALUES (1, 'Complex #1')
+INSERT INTO Complexes VALUES (2, 'Complex #2')
+INSERT INTO Complexes VALUES (3, 'Complex #3')
+INSERT INTO Complexes VALUES (4, 'Complex #4')
+
+INSERT INTO Buildings VALUES (1, 1, 'Building #1 Complex #1', 'Building Address 1')
+INSERT INTO Buildings VALUES (2, 1, 'Building #2 Complex #1', 'Building Address 2')
+INSERT INTO Buildings VALUES (3, 1, 'Building #3 Complex #1', 'Building Address 3')
+INSERT INTO Buildings VALUES (4, 1, 'Building #4 Complex #1', 'Building Address 4')
+
+INSERT INTO Buildings VALUES (5, 2, 'Building #1 Complex #2', 'Building Address 5')
+INSERT INTO Buildings VALUES (6, 2, 'Building #2 Complex #2', 'Building Address 6')
+INSERT INTO Buildings VALUES (7, 2, 'Building #3 Complex #2', 'Building Address 7')
+INSERT INTO Buildings VALUES (8, 2, 'Building #4 Complex #2', 'Building Address 8')
+
+INSERT INTO Buildings VALUES (9,  3, 'Building #1 Complex #3', 'Building Address 9')
+INSERT INTO Buildings VALUES (10, 3, 'Building #2 Complex #3', 'Building Address 10')
+INSERT INTO Buildings VALUES (11, 3, 'Building #3 Complex #3', 'Building Address 11')
+INSERT INTO Buildings VALUES (12, 3, 'Building #4 Complex #3', 'Building Address 12')
+
+INSERT INTO Buildings VALUES (13, 4, 'Building #1 Complex #4', 'Building Address 1')
+INSERT INTO Buildings VALUES (14, 4, 'Building #2 Complex #4', 'Building Address 2')
+INSERT INTO Buildings VALUES (15, 4, 'Building #3 Complex #4', 'Building Address 3')
+INSERT INTO Buildings VALUES (16, 4, 'Building #4 Complex #4', 'Building Address 4')
+
+INSERT INTO Apartments VALUES (1, 'Apartment #1 Building #1', 1)
+INSERT INTO Apartments VALUES (2, 'Apartment #2 Building #1', 1)
+INSERT INTO Apartments VALUES (3, 'Apartment #3 Building #1', 1)
+INSERT INTO Apartments VALUES (4, 'Apartment #1 Building #2', 2)
+INSERT INTO Apartments VALUES (5, 'Apartment #2 Building #2', 2)
+INSERT INTO Apartments VALUES (6, 'Apartment #3 Building #2', 2)
+INSERT INTO Apartments VALUES (7, 'Apartment #1 Building #3', 3)
+INSERT INTO Apartments VALUES (8, 'Apartment #2 Building #3', 3)
+INSERT INTO Apartments VALUES (9, 'Apartment #3 Building #3', 3)
+INSERT INTO Apartments VALUES (10, 'Apartment #1 Building #4', 4)
+INSERT INTO Apartments VALUES (11, 'Apartment #2 Building #4', 4)
+INSERT INTO Apartments VALUES (12, 'Apartment #3 Building #4', 4)
+
+INSERT INTO Tenants VALUES (1, 'Tenant #1')
+INSERT INTO Tenants VALUES (2, 'Tenant #2')
+INSERT INTO Tenants VALUES (3, 'Tenant #3')
+INSERT INTO Tenants VALUES (4, 'Tenant #4')
+
+INSERT INTO AptTenants VALUES (1, 1)
+INSERT INTO AptTenants VALUES (1, 2)
+INSERT INTO AptTenants VALUES (2, 3)
+INSERT INTO AptTenants VALUES (2, 4)
+INSERT INTO AptTenants VALUES (3, 5)
+INSERT INTO AptTenants VALUES (3, 6)
+INSERT INTO AptTenants VALUES (4, 7)
+INSERT INTO AptTenants VALUES (4, 8)
+
+
+INSERT INTO Requests VALUES (1, 'Initial', 9,  'Request Desc #1')
+INSERT INTO Requests VALUES (2, 'Initial', 10, 'Request Desc #2')
+INSERT INTO Requests VALUES (3, 'Initial', 11, 'Request Desc #3')
+
+
+INSERT INTO Apartments VALUES (4, 'Apartment1', 2)
+INSERT INTO Apartments VALUES (5, 'TestApartment2', 2)
+INSERT INTO Apartments VALUES (6, 'TestApartment3', 2)

@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC094611-DB67-4964-884B-651AE2FEA325}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonAlgo</RootNamespace>
+    <AssemblyName>CommonAlgo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C5, Version=2.4.5947.17248, Culture=neutral, PublicKeyToken=282361b99ded7e8e, processorArchitecture=MSIL">
+      <HintPath>..\packages\C5.2.4.5947.17249\lib\net45\C5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Numerics" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup>
+    <Compile Include="ADT\Graphs\2015Tasks\CheckStrongConnectivity.cs" />
+    <Compile Include="ADT\Graphs\2015Tasks\DetectCycleInGraphsDFS.cs" />
+    <Compile Include="ADT\Graphs\2015Tasks\GraphDeikstra.cs" />
+    <Compile Include="ADT\Graphs\2015Tasks\GraphPrim.cs" />
+    <Compile Include="ADT\Graphs\AStar\AStar.cs" />
+    <Compile Include="ADT\Graphs\Digraph\TopologicalSort.cs" />
+    <Compile Include="ADT\Graphs\EdgeWeighted\Edge.cs" />
+    <Compile Include="ADT\Graphs\EdgeWeighted\EdgeWeightedGraph.cs" />
+    <Compile Include="ADT\Graphs\EdgeWeighted\JavaKruskal.cs" />
+    <Compile Include="ADT\Graphs\EdgeWeighted\LazyPrimeMST.cs" />
+    <Compile Include="ADT\Graphs\EdgeWeighted\PrimeMST.cs" />
+    <Compile Include="ADT\Graphs\Graph\Cycle.cs" />
+    <Compile Include="ADT\Graphs\Base\Digraph.cs" />
+    <Compile Include="ADT\Graphs\DFS\DigraphDFS.cs" />
+    <Compile Include="ADT\Graphs\Digraph\DepthFirstOrder.cs" />
+    <Compile Include="ADT\Graphs\Graph\DirectedCycle.cs" />
+    <Compile Include="ADT\Graphs\Graph\TwoColor.cs" />
+    <Compile Include="ADT\Graphs\Reachability\DigraphPath.cs" />
+    <Compile Include="ADT\Graphs\Paths\FindShortestPathInGraph.cs" />
+    <Compile Include="ADT\Graphs\GraphConnectedComponents.cs" />
+    <Compile Include="ADT\Graphs\DFS\GraphDFS.cs" />
+    <Compile Include="ADT\Graphs\Paths\FindShortestPathInDirectedGraph.cs" />
+    <Compile Include="ADT\Graphs\Base\Graph.cs" />
+    <Compile Include="ADT\Graphs\GraphExtensions.cs" />
+    <Compile Include="ADT\Graphs\Reachability\GraphPath.cs" />
+    <Compile Include="ADT\Graphs\Base\IDigraph.cs" />
+    <Compile Include="ADT\Graphs\Tests.cs" />
+    <Compile Include="ADT\Graphs\Base\IGraph.cs" />
+    <Compile Include="ADT\Graphs\Base\IGraphPath.cs" />
+    <Compile Include="ADT\Graphs\Base\IGraphSearch.cs" />
+    <Compile Include="ADT\HashTables\DictionaryLinkedList.cs" />
+    <Compile Include="ADT\HashTables\DictionaryArray.cs" />
+    <Compile Include="ADT\HashTables\Tests.cs" />
+    <Compile Include="ADT\Interfaces\ITailedSinglyLinkedList.cs" />
+    <Compile Include="ADT\Interfaces\TailedSinglyLinkedList.cs" />
+    <Compile Include="ADT\LinkedList\DoublyLinkedList.cs" />
+    <Compile Include="ADT\Interfaces\IMthSingleLinkeList.cs" />
+    <Compile Include="ADT\Interfaces\IPrintableList.cs" />
+    <Compile Include="ADT\Interfaces\ISingleLinkeListCycle.cs" />
+    <Compile Include="ADT\Interfaces\ISinglyLinkedList.cs" />
+    <Compile Include="ADT\Interfaces\IDoublyLinkedList.cs" />
+    <Compile Include="ADT\LinkedList\MthSingleLinkedList.cs" />
+    <Compile Include="ADT\LinkedList\SingleLinkedListCycle.cs" />
+    <Compile Include="ADT\LinkedList\SinglyLinkedList.cs" />
+    <Compile Include="ADT\Interfaces\IQueue.cs" />
+    <Compile Include="ADT\Deque\Deque.cs" />
+    <Compile Include="ADT\Queue\IndexMinPQ.cs" />
+    <Compile Include="ADT\Queue\LinkedListQueue.cs" />
+    <Compile Include="ADT\Queue\PriorityQueue.cs" />
+    <Compile Include="ADT\Queue\ResizingArrayQueue.cs" />
+    <Compile Include="ADT\Queue\TwoStackQueue.cs" />
+    <Compile Include="ADT\Interfaces\IStack.cs" />
+    <Compile Include="ADT\Stacks\BlockingTwoQueueStack.cs" />
+    <Compile Include="ADT\Stacks\LinkedListStack.cs" />
+    <Compile Include="ADT\Stacks\ResizingArrayStack.cs" />
+    <Compile Include="ADT\Tests.cs" />
+    <Compile Include="ADT\Trees\ITree.cs" />
+    <Compile Include="ADT\Trees\RedBlackBST.cs" />
+    <Compile Include="ADT\Trees\SimpleTree.cs" />
+    <Compile Include="CareerCup\StringAlgo.cs" />
+    <Compile Include="CrackingTheCodingInterview\AssortedMethods.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch10\Test101.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch10\Test103.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch10\Test102.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch10\Test104.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch10\Test105.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch10\Test106.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch10\Test107.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch10\Test108.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch13\Test131.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch14_Java\CircularArray.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch14_Java\Test146.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch16\Mutex.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch16\Test163.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch16\Test165.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch16\ThreadExperiments.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch17\Test1710.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch17\Test1712.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch17\Test172.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch17\Test173.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch17\Test174.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch17\Test175.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch17\Test176.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch17\Test177.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch17\Test178.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch17\Test179.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch18\Test181.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch18\Test182.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch18\Test183.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch18\Test185.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch18\Test186.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_6 %28Brain Teasers%29\NOT IMPLEMENTED.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_7 %28Math and Probability%29\SieveOfEratosthenes.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_8 %28OOP%29\NOT IMPLEMENTED.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_1 {Array and Strings}\OwnStringBuilder.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_1 {Array and Strings}\TestClassBooleanMartixQuestion.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_1 {Array and Strings}\TestClassCompress.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_1 {Array and Strings}\MatrixRotateOn90Degrees.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_1 {Array and Strings}\Tests.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch17\Test171.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_2 %28Linked Lists%29\InnerListTest2.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_2 %28Linked Lists%29\OwnBigInteger.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_2 %28Linked Lists%29\Tests.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\Animal.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\AnimalQueue.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\Cat.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\Dog.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\FullStackException.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\MyQueueDequeueCostly.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\MyQueueEnqueueCostly.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\MyStackPopCostly.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\MyStackPushCostly.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\MyStackSortAscending.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\StackIsEmptyException.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\StackWithMin.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\Tests.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\Tower.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\_3StackInArray.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_3 %28Stacks And Queue%29\_3StackInResizedArray.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_4 %28Trees And Graphs%29\Test41Inefficient.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_4 %28Trees And Graphs%29\Test42DFSPathTo.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_4 %28Trees And Graphs%29\Test43.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_4 %28Trees And Graphs%29\Test44LinkedListAndBinaryTree.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_4 %28Trees And Graphs%29\Test45.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_4 %28Trees And Graphs%29\Test46.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_4 %28Trees And Graphs%29\Test47.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_4 %28Trees And Graphs%29\Test48.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_4 %28Trees And Graphs%29\Test49.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_4 %28Trees And Graphs%29\TestBFSDFSClass.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_5 %28Bit manipulation%29\BitInteger.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_5 %28Bit manipulation%29\Test51.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_5 %28Bit manipulation%29\Test52.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_5 %28Bit manipulation%29\Test53.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_5 %28Bit manipulation%29\Test54.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_5 %28Bit manipulation%29\Test55.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_5 %28Bit manipulation%29\Test56.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_5 %28Bit manipulation%29\Test57.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_5 %28Bit manipulation%29\Test58.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_9 %28Recursion And Dynamic Programming%29\Test91.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_9 %28Recursion And Dynamic Programming%29\Test910.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_9 %28Recursion And Dynamic Programming%29\Test911.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_9 %28Recursion And Dynamic Programming%29\Test92.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_9 %28Recursion And Dynamic Programming%29\Test93.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_9 %28Recursion And Dynamic Programming%29\Test94.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_9 %28Recursion And Dynamic Programming%29\Test95.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_9 %28Recursion And Dynamic Programming%29\Test96.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_9 %28Recursion And Dynamic Programming%29\Test97.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_9 %28Recursion And Dynamic Programming%29\Test98.cs" />
+    <Compile Include="CrackingTheCodingInterview\Ch_9 %28Recursion And Dynamic Programming%29\Test99.cs" />
+    <Compile Include="GoogleInternInterview2014\Solver1.cs" />
+    <Compile Include="GoogleInternInterview2015\BestTimeToSellStock .cs" />
+    <Compile Include="GoogleInternInterview2015\FindingTheMinimumWindowInSWhichContainsAllElementsFromT.cs" />
+    <Compile Include="GoogleInternInterview2015\Solver1.cs" />
+    <Compile Include="GoogleInternInterview2015\CareerCup.cs" />
+    <Compile Include="GoogleInternInterview2015\MovingAverage.cs" />
+    <Compile Include="GoogleInternInterview2015\Pots of gold game.cs" />
+    <Compile Include="GoogleInternInterview2015\Solver2.cs" />
+    <Compile Include="GoogleInternInterview2015\SumOfTwoArraysWithDigits.cs" />
+    <Compile Include="GoogleInternInterview2015\There is a code with a runtime error.cs" />
+    <Compile Include="GoogleInternInterview2015\DistributedSystemTests.cs" />
+    <Compile Include="GoogleInternInterview2015\MinimizeOverlapedOrConsecutiveRegions.cs" />
+    <Compile Include="GoogleInternInterview2015\TopologicalSort.cs" />
+    <Compile Include="InterviewBit\Backtracking\LetterPhone.cs" />
+    <Compile Include="InterviewBit\Backtracking\GreyCode.cs" />
+    <Compile Include="InterviewBit\Backtracking\LetterPhone2.cs" />
+    <Compile Include="InterviewBit\Backtracking\Modulo.cs" />
+    <Compile Include="InterviewBit\Backtracking\PolindromePartitioning.cs" />
+    <Compile Include="InterviewBit\BinarySearch\AllocateBooks.cs" />
+    <Compile Include="InterviewBit\BinarySearch\CountElementOccurence.cs" />
+    <Compile Include="InterviewBit\BinarySearch\ImplementPowerFunction.cs" />
+    <Compile Include="InterviewBit\BinarySearch\MatrixMedian.cs" />
+    <Compile Include="InterviewBit\BinarySearch\MatrixSearch.cs" />
+    <Compile Include="InterviewBit\BinarySearch\MedianOfTwoArray.cs" />
+    <Compile Include="InterviewBit\BinarySearch\PainterPartition.cs" />
+    <Compile Include="InterviewBit\BinarySearch\RotatedArray.cs" />
+    <Compile Include="InterviewBit\BinarySearch\RotatedArraySearch.cs" />
+    <Compile Include="InterviewBit\BinarySearch\SearchForARange.cs" />
+    <Compile Include="InterviewBit\BinarySearch\SorterdInsertPosition.cs" />
+    <Compile Include="InterviewBit\BinarySearch\SquareRootOfInteger.cs" />
+    <Compile Include="InterviewBit\BitManipulation\CountBitsOnes.cs" />
+    <Compile Include="InterviewBit\BitManipulation\CountBitsSumPairwise.cs" />
+    <Compile Include="InterviewBit\BitManipulation\Divideintegers.cs" />
+    <Compile Include="InterviewBit\BitManipulation\ReverseBits.cs" />
+    <Compile Include="InterviewBit\BitManipulation\SingleNumber.cs" />
+    <Compile Include="InterviewBit\BitManipulation\SingleNumber2.cs" />
+    <Compile Include="InterviewBit\DP\ClimbStairs.cs" />
+    <Compile Include="InterviewBit\DP\MinDistance.cs" />
+    <Compile Include="InterviewBit\DP\MinJumps.cs" />
+    <Compile Include="InterviewBit\DP\PalindromePartitioning2.cs" />
+    <Compile Include="InterviewBit\DP\Repeating Sub-Sequence.cs" />
+    <Compile Include="InterviewBit\DP\WordBreak.cs" />
+    <Compile Include="InterviewBit\Graphs\CaptureTheRegion.cs" />
+    <Compile Include="InterviewBit\Graphs\KnightOnChess.cs" />
+    <Compile Include="InterviewBit\Graphs\LevelTraversal.cs" />
+    <Compile Include="InterviewBit\Graphs\Multiply0and1.cs" />
+    <Compile Include="InterviewBit\Graphs\NumberOfIslands.cs" />
+    <Compile Include="InterviewBit\Graphs\SteppingNumbers.cs" />
+    <Compile Include="InterviewBit\Graphs\WordSearch.cs" />
+    <Compile Include="InterviewBit\Greedy\Bulbs.cs" />
+    <Compile Include="InterviewBit\Greedy\DisrtibuteCandies.cs" />
+    <Compile Include="InterviewBit\Greedy\GasStations.cs" />
+    <Compile Include="InterviewBit\Greedy\HighestProduct.cs" />
+    <Compile Include="InterviewBit\Greedy\Seats.cs" />
+    <Compile Include="InterviewBit\Greedy\SumOfFibonachiNumbers.cs" />
+    <Compile Include="InterviewBit\Level2\PrettyPrint.cs" />
+    <Compile Include="InterviewBit\LinkedLists\AddToNumbersAsList.cs" />
+    <Compile Include="InterviewBit\LinkedLists\RemoveDuplicatesFromSortedList1.cs" />
+    <Compile Include="InterviewBit\LinkedLists\IntersectionOfLinkedLists.cs" />
+    <Compile Include="InterviewBit\LinkedLists\PalindromeList.cs" />
+    <Compile Include="InterviewBit\LinkedLists\RemoveDuplicatesFromSortedList2.cs" />
+    <Compile Include="InterviewBit\LinkedLists\RemoveNthElementFromTheList.cs" />
+    <Compile Include="InterviewBit\LinkedLists\ReorderList.cs" />
+    <Compile Include="InterviewBit\LinkedLists\ReverseLinkedList.cs" />
+    <Compile Include="InterviewBit\LinkedLists\RotateTheList.cs" />
+    <Compile Include="InterviewBit\Maths\ExcelColumnHeader.cs" />
+    <Compile Include="InterviewBit\Maths\IntIsPolindrome.cs" />
+    <Compile Include="InterviewBit\Maths\PowerOf2Int.cs" />
+    <Compile Include="InterviewBit\Maths\RearrangeArray.cs" />
+    <Compile Include="InterviewBit\StackQueues\EvaluateExpression.cs" />
+    <Compile Include="InterviewBit\StackQueues\LargestRectangleArea.cs" />
+    <Compile Include="InterviewBit\StackQueues\MaxSlidingWindows.cs" />
+    <Compile Include="InterviewBit\StackQueues\MinStack.cs" />
+    <Compile Include="InterviewBit\StackQueues\NearestSmallerElements.cs" />
+    <Compile Include="InterviewBit\StackQueues\RedundantBraces.cs" />
+    <Compile Include="InterviewBit\StackQueues\SimplifyPath.cs" />
+    <Compile Include="InterviewBit\StackQueues\RainWaterTrapped.cs" />
+    <Compile Include="InterviewBit\Strings\AddBinary.cs" />
+    <Compile Include="InterviewBit\Strings\Atoi.cs" />
+    <Compile Include="InterviewBit\Strings\CompareVersionNumber.cs" />
+    <Compile Include="InterviewBit\Strings\CountAndSay.cs" />
+    <Compile Include="InterviewBit\Strings\IntToRoman.cs" />
+    <Compile Include="InterviewBit\Strings\IsValidPolindrome.cs" />
+    <Compile Include="InterviewBit\Strings\JustifyText.cs" />
+    <Compile Include="InterviewBit\Strings\LengthOfLastWord.cs" />
+    <Compile Include="InterviewBit\Strings\LongestCommonPrefix.cs" />
+    <Compile Include="InterviewBit\Strings\LongestPolyndromicSubstring.cs" />
+    <Compile Include="InterviewBit\Strings\MultiplyStrings.cs" />
+    <Compile Include="InterviewBit\Strings\PowerOfTwo.cs" />
+    <Compile Include="InterviewBit\Strings\PrettyJson.cs" />
+    <Compile Include="InterviewBit\Strings\RestoreIpAddresses.cs" />
+    <Compile Include="InterviewBit\Strings\ReverseTheString.cs" />
+    <Compile Include="InterviewBit\Strings\RomanToInteger.cs" />
+    <Compile Include="InterviewBit\Strings\StrStr.cs" />
+    <Compile Include="InterviewBit\Strings\ValidNumber.cs" />
+    <Compile Include="InterviewBit\Strings\ZigZagString.cs" />
+    <Compile Include="InterviewBit\TreeMapsAndHeaps\DistinctNumbersInWindow.cs" />
+    <Compile Include="InterviewBit\TreeMapsAndHeaps\LRUCache.cs" />
+    <Compile Include="InterviewBit\TreeMapsAndHeaps\MergeKSortedLists.cs" />
+    <Compile Include="InterviewBit\Tree\2Sum.cs" />
+    <Compile Include="InterviewBit\Tree\BinaryTreeFromPostOrderAndInorder.cs" />
+    <Compile Include="InterviewBit\Tree\BstIterator.cs" />
+    <Compile Include="InterviewBit\Tree\CartesianTree.cs" />
+    <Compile Include="InterviewBit\Tree\FlattenBinaryTree.cs" />
+    <Compile Include="InterviewBit\Tree\GetMaxHieght.cs" />
+    <Compile Include="InterviewBit\Tree\IndenticalBinaryTree.cs" />
+    <Compile Include="InterviewBit\Tree\InOrderAndPreOrderTraversalAreGivenBuildBst.cs" />
+    <Compile Include="InterviewBit\Tree\InOrderSuccessor.cs" />
+    <Compile Include="InterviewBit\Tree\InOrderTraversal.cs" />
+    <Compile Include="InterviewBit\Tree\InvertBinaryTree.cs" />
+    <Compile Include="InterviewBit\Tree\IsBalancedBst.cs" />
+    <Compile Include="InterviewBit\Tree\KthSmallestInArray.cs" />
+    <Compile Include="InterviewBit\Tree\LowestCommonAncestor.cs" />
+    <Compile Include="InterviewBit\Tree\MinDepthOfBinaryTree.cs" />
+    <Compile Include="InterviewBit\Tree\OrderOfHeights.cs" />
+    <Compile Include="InterviewBit\Tree\PathSum.cs" />
+    <Compile Include="InterviewBit\Tree\PopulateNextRightPointersTree.cs" />
+    <Compile Include="InterviewBit\Tree\PostOrderTraversal.cs" />
+    <Compile Include="InterviewBit\Tree\PreorderTraversal.cs" />
+    <Compile Include="InterviewBit\Tree\RecoverBst.cs" />
+    <Compile Include="InterviewBit\Tree\RootToLeafPathWithSum.cs" />
+    <Compile Include="InterviewBit\Tree\ShorterstPrefixTrie.cs" />
+    <Compile Include="InterviewBit\Tree\SortedArrToBst.cs" />
+    <Compile Include="InterviewBit\Tree\SumRootToleafNumbersDfs.cs" />
+    <Compile Include="InterviewBit\Tree\SymmetricBinaryTree.cs" />
+    <Compile Include="InterviewBit\Tree\ValidBst.cs" />
+    <Compile Include="InterviewBit\Tree\ZigZagLevelOrderTraversal.cs" />
+    <Compile Include="InterviewBit\TwoPointers\ArrayOf3Pointers.cs" />
+    <Compile Include="InterviewBit\TwoPointers\ContainerWithMostWater.cs" />
+    <Compile Include="InterviewBit\TwoPointers\CountingTriangles.cs" />
+    <Compile Include="InterviewBit\TwoPointers\DiffK.cs" />
+    <Compile Include="InterviewBit\TwoPointers\IntersectionOfSortedArrays.cs" />
+    <Compile Include="InterviewBit\TwoPointers\MaxContinousSeriesOfOnes.cs" />
+    <Compile Include="InterviewBit\TwoPointers\MergeTwoSortedLists2.cs" />
+    <Compile Include="InterviewBit\TwoPointers\RemoveDuplicatesFromSortedArray.cs" />
+    <Compile Include="InterviewBit\TwoPointers\RemoveDuplicatesFromSortedArray2.cs" />
+    <Compile Include="InterviewBit\TwoPointers\RemoveElementFromArray.cs" />
+    <Compile Include="InterviewBit\TwoPointers\SortByColor.cs" />
+    <Compile Include="InterviewBit\TwoPointers\_3Sum.cs" />
+    <Compile Include="InterviewBit\TwoPointers\_3SumZero.cs" />
+    <Compile Include="InterviewBit\WaveArraySort.cs" />
+    <Compile Include="Misc\BitCounting.cs" />
+    <Compile Include="Misc\Combinatorics.cs" />
+    <Compile Include="Misc\EightOfCicle.cs" />
+    <Compile Include="Misc\GreyCode.cs" />
+    <Compile Include="Misc\SlideOnArray.cs" />
+    <Compile Include="Misc\ToptalCodility.cs" />
+    <Compile Include="Misc\Overlap.cs" />
+    <Compile Include="Misc\ReverseStackRecursion.cs" />
+    <Compile Include="Misc\RotationArrayInPlace.cs" />
+    <Compile Include="Misc\Shuffle.cs" />
+    <Compile Include="Misc\TwitterVolumeInArrayTest.cs" />
+    <Compile Include="Misc\VTableEmulation.cs" />
+    <Compile Include="ProjectEuler\Task1.cs" />
+    <Compile Include="ProjectEuler\Task13.cs" />
+    <Compile Include="ProjectEuler\Task14.cs" />
+    <Compile Include="ProjectEuler\Task16.cs" />
+    <Compile Include="ProjectEuler\Task2.cs" />
+    <Compile Include="ProjectEuler\Task3.cs" />
+    <Compile Include="ProjectEuler\Test10.cs" />
+    <Compile Include="ProjectEuler\Test11.cs" />
+    <Compile Include="ProjectEuler\Test12.cs" />
+    <Compile Include="ProjectEuler\Test4.cs" />
+    <Compile Include="ProjectEuler\Test5.cs" />
+    <Compile Include="ProjectEuler\Test6.cs" />
+    <Compile Include="ProjectEuler\Test7.cs" />
+    <Compile Include="ProjectEuler\Test7_1.cs" />
+    <Compile Include="ProjectEuler\Test8.cs" />
+    <Compile Include="ProjectEuler\Test9.cs" />
+    <Compile Include="Recursion\Tests.cs" />
+    <Compile Include="SearchAlgo\FindKSmallestLargestElement.cs" />
+    <Compile Include="SortingAlgo\HeapSort.cs" />
+    <Compile Include="SortingAlgo\SelectionSort.cs" />
+    <Compile Include="SortingAlgo\InsertionSort.cs" />
+    <Compile Include="SortingAlgo\MergeSort.cs" />
+    <Compile Include="SortingAlgo\QuickSort.cs" />
+    <Compile Include="SortingAlgo\ShellSort.cs" />
+    <Compile Include="SortingAlgo\Tests.cs" />
+    <Compile Include="SearchAlgo\BinarySearch.cs" />
+    <Compile Include="SearchAlgo\CadaneAlgo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GoogleInternInterview2014\Solver2.cs" />
+    <Compile Include="StringAndArrays\KnutMorrisPratt.cs" />
+    <Compile Include="StringAndArrays\KnutMorrisPratt1.cs" />
+    <Compile Include="StringAndArrays\KnutMorrisPratt2.cs" />
+    <Compile Include="StringAndArrays\RabinKarp.cs" />
+    <Compile Include="StringAndArrays\ShortestWordDistance.cs" />
+    <Compile Include="StringAndArrays\Tests.cs" />
+    <Content Include="Pics\k_stat_order.png" />
+    <Content Include="TestData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="TestBits.cs" />
+    <Compile Include="TestBinarySearch.cs" />
+    <Compile Include="TestMergeSort.cs" />
+    <Compile Include="Testss.cs" />
+    <Compile Include="Toptal\ToptalSecondStage.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GraphSmall.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pics\BinarySearchIndexOfMinimumRotatedArray.jpg" />
+    <Content Include="TinyEWG.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
